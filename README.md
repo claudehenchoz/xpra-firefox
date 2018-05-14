@@ -29,6 +29,10 @@ docker run -d --net host -e DISPLAY=$DISPLAY --device /dev/snd \
 -v $HOME/.Xauthority:/root/.Xauthority --rm xpra-firefox firefox
 ```
 
+## Issues
+
+* Sound doesn't work yet
+
 ## Development
 Want to improve this (bugfixes, extra features, ...) ?
 
