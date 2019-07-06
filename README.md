@@ -25,13 +25,13 @@ The environment variable `XPRA_PORT` is `10000` by default but can be changed to
 You can also use this to run firefox locally in a container:
 
 ```
-docker run -d --net host -e DISPLAY=$DISPLAY --device /dev/snd \
--v $HOME/.Xauthority:/root/.Xauthority --rm garo/xpra-firefox firefox
+docker run -d --net host -e DISPLAY=$DISPLAY --rm \
+-v $HOME/.Xauthority:/root/.Xauthority garo/xpra-firefox firefox
 ```
 
 ## Issues
 
-* Sound doesn't work yet
+* Sound doesn't work
 
 ## Development
 Want to improve this (bugfixes, extra features, ...) ?
