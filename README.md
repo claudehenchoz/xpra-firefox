@@ -35,10 +35,6 @@ docker run -d --net host -e DISPLAY=$DISPLAY --rm -v /dev/shm:/dev/shm \
 -v $HOME/.Xauthority:/root/.Xauthority garo/xpra-firefox firefox
 ```
 
-## Issues
-
-* Sound doesn't work
-
 ## Development
 Want to improve this (bugfixes, extra features, ...) ?
 
