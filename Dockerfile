@@ -1,8 +1,7 @@
-FROM garo/easy-xpra:latest
+FROM garo/easy-xpra:alpine
 MAINTAINER Nikolas Garofil "nikolas@garofil.be"
 
-#Install firefox, everything is on 1 layer to shrink image size (e.g. cleaning the apt cache on a new layer is pretty useless because the layer before still contains this data)
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install firefox && apt-get -y --purge autoremove && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apk add --no-cache --update firefox-esr
 
 WORKDIR /root
 RUN mkdir -p .mozilla/firefox/abcdefgh.default
@@ -15,6 +14,9 @@ Name=Default User\n\
 IsRelative=1\n\
 Path=abcdefgh.default\n\
 ' > .mozilla/firefox/profiles.ini
+
+COPY generatemachineid.py .
+RUN ./generatemachineid.py > /etc/machine-id && rm generatemachineid.py
 
 #Run firefox in xpra
 CMD ["run_in_xpra", "firefox"]
