@@ -6,8 +6,8 @@ Xpra allows you to use the speed of X-forwarding (a bit faster even) and the det
 
 ## Tags
 
-* [latest](https://github.com/ngaro/xpra-firefox/blob/master/Dockerfile) uses Ubuntu as base
-* [alpine](https://github.com/ngaro/xpra-firefox/blob/alpine/Dockerfile) uses Alpine as base
+* [latest](https://github.com/ngaro/xpra-firefox/blob/master/Dockerfile) uses Alpine as base
+* [ubuntu](https://github.com/ngaro/xpra-firefox/blob/ubuntu/Dockerfile) uses Ubuntu as base
 
 
 ## XPRA Usage
@@ -34,6 +34,10 @@ You can also use this to run firefox locally in a container:
 docker run -d --net host -e DISPLAY=$DISPLAY --rm -v /dev/shm:/dev/shm \
 --device /dev/snd -v $HOME/.Xauthority:/root/.Xauthority garo/xpra-firefox firefox
 ```
+
+## Issues
+
+* Sound doesn't work in the ubuntu version
 
 ## Development
 Want to improve this (bugfixes, extra features, ...) ?
