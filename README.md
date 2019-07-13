@@ -9,12 +9,13 @@ Xpra allows you to use the speed of X-forwarding (a bit faster even) and the det
 * [latest](https://github.com/ngaro/xpra-firefox/blob/master/Dockerfile) uses Alpine as base
 * [ubuntu](https://github.com/ngaro/xpra-firefox/blob/ubuntu/Dockerfile) uses Ubuntu as base
 
-
 ## XPRA Usage
 
 To run Firefox on 'fireserver' listening for xpra-connections on tcp/12345 for clients that want to use it:
 
-* Run the container : `docker run -d -p 12345:10000 --name xprafire -v /dev/shm:/dev/shm --device /dev/snd garo/xpra-firefox`
+* Run the container:
+
+`docker run -d -p 12345:10000 --name xprafire -v /dev/shm:/dev/shm --device /dev/snd garo/xpra-firefox`
 
 * Wait a couple of seconds for everything to start...
 
