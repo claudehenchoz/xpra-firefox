@@ -6,8 +6,9 @@ Xpra allows you to use the speed of X-forwarding (a bit faster even) and the det
 
 ## Tags
 
-* [latest](https://github.com/ngaro/xpra-firefox/blob/master/Dockerfile) uses Alpine as base
+* [latest](https://github.com/ngaro/xpra-firefox/blob/latest/Dockerfile) uses Alpine as base
 * [ubuntu](https://github.com/ngaro/xpra-firefox/blob/ubuntu/Dockerfile) uses Ubuntu as base
+* [ubudev](https://github.com/ngaro/xpra-firefox/blob/ubudev/Dockerfile) uses Firefox Developer Edition on Ubuntu
 
 ## XPRA Usage
 

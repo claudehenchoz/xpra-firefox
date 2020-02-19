@@ -1,4 +1,4 @@
-FROM garo/easy-xpra:alpine
+FROM garo/easy-xpra:latest
 MAINTAINER Nikolas Garofil "nikolas@garofil.be"
 
 RUN apk add --no-cache --update py3-cairo
