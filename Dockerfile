@@ -1,6 +1,7 @@
 FROM garo/easy-xpra:alpine
 MAINTAINER Nikolas Garofil "nikolas@garofil.be"
 
+RUN apk add --no-cache --update py3-cairo
 RUN apk add --no-cache --update firefox-esr
 
 WORKDIR /root
