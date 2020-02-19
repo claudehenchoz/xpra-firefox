@@ -1,4 +1,4 @@
-FROM garo/easy-xpra:latest
+FROM garo/easy-xpra:ubuntu
 MAINTAINER Nikolas Garofil "nikolas@garofil.be"
 
 RUN apt-get update && apt-get -y install curl libgtk-3-0 libdbus-glib-1-2 && apt-get -y --purge autoremove && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
