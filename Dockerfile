@@ -3,6 +3,7 @@ MAINTAINER Nikolas Garofil "nikolas@garofil.be"
 
 RUN apk add --no-cache --update py3-cairo
 RUN apk add --no-cache --update firefox-esr
+RUN apk add --no-cache --update ttf-dejavu
 
 WORKDIR /root
 RUN mkdir -p .mozilla/firefox/abcdefgh.default
