@@ -1,7 +1,7 @@
-FROM garo/easy-xpra:latest
+FROM garo/easy-xpra:alpine
 MAINTAINER Nikolas Garofil "nikolas@garofil.be"
 
-RUN apt-get update && apt-get -y install firefox && apt-get -y --purge autoremove && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apk add --no-cache --update firefox-esr
 
 WORKDIR /root
 RUN mkdir -p .mozilla/firefox/abcdefgh.default
